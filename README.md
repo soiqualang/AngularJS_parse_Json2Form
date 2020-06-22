@@ -37,6 +37,10 @@ delete t1["Bí đao,bầu, mướp"]
   
 ```
 
+## CRUD Object key-val
+
+t2.php
+
 ## Autocomplete textbox and AngularJS
 
 https://stackoverflow.com/questions/27996672/autocomplete-textbox-and-angularjs
@@ -45,7 +49,7 @@ http://plnkr.co/edit/5XmPfQ78vRjSrxE0Tt3B?p=preview&preview
 
 > Dùng Jquery UI
 
-
+t4.html
 
 
 ## References
