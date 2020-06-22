@@ -39,7 +39,7 @@ delete t1["Bí đao,bầu, mướp"]
 
 ## CRUD Object key-val
 
-t2.php
+<a href="t2.html">t2.html</a>
 
 ## Autocomplete textbox and AngularJS
 
@@ -49,7 +49,7 @@ http://plnkr.co/edit/5XmPfQ78vRjSrxE0Tt3B?p=preview&preview
 
 > Dùng Jquery UI
 
-t4.html
+<a href="t4.html">t4.html</a>
 
 
 ## References
