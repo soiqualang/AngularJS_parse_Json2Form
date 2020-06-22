@@ -37,6 +37,16 @@ delete t1["Bí đao,bầu, mướp"]
   
 ```
 
+## Autocomplete textbox and AngularJS
+
+https://stackoverflow.com/questions/27996672/autocomplete-textbox-and-angularjs
+
+http://plnkr.co/edit/5XmPfQ78vRjSrxE0Tt3B?p=preview&preview
+
+> Dùng Jquery UI
+
+
+
 
 ## References
 
@@ -51,3 +61,7 @@ https://www.w3schools.com/js/js_object_properties.asp
 https://www.w3schools.com/angular/ng_ng-repeat.asp
 
 https://www.w3schools.com/howto/howto_css_browser_window.asp
+
+https://www.w3schools.com/w3css/w3css_input.asp
+
+https://www.w3schools.com/howto/howto_js_autocomplete.asp
