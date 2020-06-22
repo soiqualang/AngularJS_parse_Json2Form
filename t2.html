@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+
+<div ng-app="myApp" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Thêm thuộc tính</h3>
+  </header>
+  <ul class="w3-ul">
+    <li ng-repeat="(key, value) in thuoctinh" class="w3-padding-16">{{key}}<span ng-click="removeItem(key)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
+  </ul>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <div class="w3-row w3-margin-top">
+      <div class="w3-third">
+        <input placeholder="Loại cây" ng-model="addMe_key" ng-keydown="keyPress($event);" class="w3-input w3-border w3-padding">
+      </div>
+      <div class="w3-third">
+        <input placeholder="Giá trị" ng-model="addMe_val" ng-keydown="keyPress($event);" class="w3-input w3-border w3-padding">
+      </div>
+      <div class="w3-third">
+        <button ng-click="addItem()" class="w3-btn w3-padding w3-green">Thêm</button>
+      </div>
+    </div>
+    <p class="w3-text-red">{{errortext}}</p>
+  </div>
+
+  <hr>
+
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <select ng-model="selectedCar_obj" ng-options="x for (x,y) in thuoctinh" class="w3-input w3-border w3-padding">
+    </select>
+
+    <h3>You selected: {{selectedCar_obj}}</h3>
+  </div>
+
+
+
+</div>
+
+
+<script>
+var app = angular.module("myApp", []); 
+app.controller("myCtrl", function($scope) {
+  $scope.products = ["Bắp", "Dưa leo", "Khổ qua"];
+
+  $scope.addItem = function () {
+      $scope.errortext = "";
+      if (!$scope.addMe_key) {return;}
+      /* if ($scope.addMe_key in $scope.thuoctinh) {
+          $scope.thuoctinh[$scope.addMe_key]=$scope.addMe_val;
+
+          $scope.addMe_key='';
+          $scope.addMe_val='';
+      } else {
+          $scope.errortext = "Có rồi!.";
+      } */
+
+      /* Có rồi thì update, chưa có thì thêm mới */
+      $scope.thuoctinh[$scope.addMe_key]=$scope.addMe_val;
+      $scope.addMe_key='';
+      $scope.addMe_val='';
+  }
+
+  $scope.removeItem = function (x) {
+      $scope.errortext = "";    
+      delete $scope.thuoctinh[x];
+  }
+
+  $scope.keyPress = function(e){
+    //console.log(e.keyCode);
+    //(e.keyCode==13)?addItem():return;
+    if(e.keyCode==13){
+      $scope.addItem();
+    }
+  }
+
+  $scope.thuoctinh = {
+      "Bắp": 5.0,
+      "Dưa leo": 10.0,
+      "Khổ qua": 8.0,
+      "Cà phổi": 2.0,
+      "Dưa hấu": 6.0,
+      "Đậu các loại": 5.5,
+      "Bí đao,bầu, mướp": 9.5,
+      "Rau ăn lá các loại": 15.5
+  };
+
+
+});
+</script>
+</body>
+</html>
