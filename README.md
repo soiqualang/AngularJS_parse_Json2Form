@@ -69,3 +69,5 @@ https://www.w3schools.com/howto/howto_css_browser_window.asp
 https://www.w3schools.com/w3css/w3css_input.asp
 
 https://www.w3schools.com/howto/howto_js_autocomplete.asp
+
+https://stackoverflow.com/questions/41567495/angularjs-getting-all-keys-from-an-object
